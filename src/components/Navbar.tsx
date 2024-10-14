@@ -1,14 +1,32 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import logo from "../assets/Adaptive HRIS Web 2024 Artboard 2.png";
 import { RiMenu3Fill } from "react-icons/ri";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const Navbar = () => {
+  const menuRef = useRef(null);
   const [showMenu, setShowMenu] = useState<boolean>(false);
 
   const setMenu = (): void => {
-    setShowMenu(!showMenu);
+    setShowMenu((prev) => !prev);
     console.log(showMenu);
+    if (!showMenu && menuRef.current) {
+      gsap.from(menuRef.current, {
+        x: "+=100",
+        opacity: 0,
+        duration: 2,
+      });
+    }
   };
+
+  //   useGSAP(() => {
+  //     gsap.from(menuRef.current, {
+  //       x: "+=100",
+  //       opacity: 0,
+  //       duration: 2,
+  //     });
+  //   });
 
   return (
     <nav>
@@ -41,25 +59,28 @@ const Navbar = () => {
         <div onClick={setMenu} className="block relative md:hidden">
           <RiMenu3Fill className="text-3xl menu" />
 
-          {showMenu && (
-            <div className="w-[400px] h-[50vh] bg-white absolute top-12 right-[-15px] z-10">
-              <ul className="flex flex-col text-center space-y-6 text-3xl">
-                <li>About</li>
+          {showMenu === true ? (
+            <div
+              ref={menuRef}
+              className="w-[400px] h-[50vh] bg-white absolute top-12 right-[-35px] z-10"
+            >
+              <ul className="flex flex-col text-gray-500 text-center space-y-6 text-3xl cursor-pointer">
+                <li className="hover:text-gray-950">About</li>
                 <hr />
-                <li>Features</li>
+                <li className="hover:text-gray-950">Features</li>
                 <hr />
-                <li>Pricing</li>
+                <li className="hover:text-gray-950">Pricing</li>
                 <hr />
-                <li>Resources</li>
+                <li className="hover:text-gray-950">Resources</li>
                 <hr />
-                <li>Contact us</li>
+                <li className="hover:text-gray-950">Contact us</li>
                 <hr />
               </ul>
               <div className="text-center text-white mt-10 py-4 w-[170px] mx-auto bg-primary">
                 Request a Demo
               </div>
             </div>
-          )}
+          ) : null}
         </div>
       </div>
     </nav>

@@ -63,9 +63,9 @@ const Footer = () => {
           <MdOutlineCopyright className="mr-2" />
           2024 Adaptive Computer Solutions
         </div>
-        <div className="flex space-x-3 md:space-x-10">
-          <p>Terms of Use</p>
-          <p>Privacy & Security</p>
+        <div className="flex text-gray-700 space-x-3 md:space-x-10 cursor-pointer">
+          <p className="hover:text-black">Terms of Use</p>
+          <p className="hover:text-black">Privacy & Security</p>
         </div>
       </div>
     </div>
