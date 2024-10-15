@@ -1,6 +1,6 @@
 import { GrFormNextLink } from "react-icons/gr";
 import { GrLinkPrevious } from "react-icons/gr";
-import customer from "../assets/customer1.jpeg";
+import customer from "/Users/kwadwo/Development/React js/adaptive_hris_home/src/assets/customer1.jpeg";
 
 const Customer = () => {
   return (

@@ -37,8 +37,8 @@ const Uncover = () => {
         </div>
       </div>
       <div className="mt-5 px-[20%]">
-        <div className="w-full bg-gray-400 h-4 rounded-full">
-          <div className="h-full w-[20%] bg-primary rounded-full"></div>
+        <div className="w-full bg-blue-400 h-4 rounded-full">
+          <div className="h-full w-[20%] bg-gray-500 rounded-full"></div>
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import logo from "../assets/Adaptive HRIS Web 2024 Artboard 2.png";
+import logo from "/Users/kwadwo/Development/React js/adaptive_hris_home/src/assets/Adaptive HRIS Web 2024 Artboard 2.png";
 import { MdEmail, MdOutlineCopyright } from "react-icons/md";
 import { FaPhone } from "react-icons/fa6";
 import { FaLinkedin, FaFacebookSquare } from "react-icons/fa";

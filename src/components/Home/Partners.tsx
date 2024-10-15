@@ -1,16 +1,16 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
-import benz from "../assets/partners/benz.png";
-import peugeot from "../assets/partners/peugeot_logo.png";
-import japan from "../assets/partners/japan_logo.png";
-import maverick from "../assets/partners/maverick.png";
-import marina from "../assets/partners/marina.png";
-import yamaha from "../assets/partners/yamaha.png";
-import startbow from "../assets/partners/starbow.png";
-import koudijs from "../assets/partners/koudijs.webp";
-import ic from "../assets/partners/icsecurities.png";
-import bidvest from "../assets/partners/bidvest.png";
+import benz from "/Users/kwadwo/Development/React js/adaptive_hris_home/src/assets/partners/benz.png";
+import peugeot from "/Users/kwadwo/Development/React js/adaptive_hris_home/src/assets/partners/peugeot_logo.png";
+import japan from "/Users/kwadwo/Development/React js/adaptive_hris_home/src/assets/partners/japan_logo.png";
+import maverick from "/Users/kwadwo/Development/React js/adaptive_hris_home/src/assets/partners/maverick.png";
+import marina from "/Users/kwadwo/Development/React js/adaptive_hris_home/src/assets/partners/marina.png";
+import yamaha from "/Users/kwadwo/Development/React js/adaptive_hris_home/src/assets/partners/yamaha.png";
+import startbow from "/Users/kwadwo/Development/React js/adaptive_hris_home/src/assets/partners/starbow.png";
+import koudijs from "/Users/kwadwo/Development/React js/adaptive_hris_home/src/assets/partners/koudijs.webp";
+import ic from "/Users/kwadwo/Development/React js/adaptive_hris_home/src/assets/partners/icsecurities.png";
+import bidvest from "/Users/kwadwo/Development/React js/adaptive_hris_home/src/assets/partners/bidvest.png";
 import { useRef } from "react";
 
 const Partners = () => {

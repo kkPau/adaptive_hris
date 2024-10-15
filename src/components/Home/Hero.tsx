@@ -1,4 +1,4 @@
-import hero from "../assets/Adaptive HRIS Web 2024 screenshot.png";
+import hero from "/Users/kwadwo/Development/React js/adaptive_hris_home/src/assets/Adaptive HRIS Web 2024 screenshot.png";
 
 const Hero = () => {
   return (

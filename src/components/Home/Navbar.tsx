@@ -1,11 +1,12 @@
 import { useRef, useState } from "react";
-import logo from "../assets/Adaptive HRIS Web 2024 Artboard 2.png";
+import logo from "/Users/kwadwo/Development/React js/adaptive_hris_home/src/assets/Adaptive HRIS Web 2024 Artboard 2.png";
 import { RiMenu3Fill } from "react-icons/ri";
-import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const menuRef = useRef(null);
+  const navigate = useNavigate();
   const [showMenu, setShowMenu] = useState<boolean>(false);
 
   const setMenu = (): void => {
@@ -32,25 +33,33 @@ const Navbar = () => {
     <nav>
       <div className="flex  px-10 md:pl-0 py-5 md:py-0 justify-between md:justify-around items-center">
         <div className="cursor-pointer">
-          <img className="w-[10rem]" src={logo} alt="" />
+          <NavLink to="/">
+            <img className="w-[10rem]" src={logo} alt="" />
+          </NavLink>
         </div>
         <div className="hidden md:block">
           <ul className="flex space-x-10">
-            <li className="cursor-pointer hover:underline">
-              <a href="#">About</a>
-            </li>
-            <li className="cursor-pointer hover:underline">
-              <a href="#">Features</a>
-            </li>
-            <li className="cursor-pointer hover:underline">
-              <a href="#">Pricing</a>
-            </li>
-            <li className="cursor-pointer hover:underline">
-              <a href="#">Resources</a>
-            </li>
-            <li className="cursor-pointer hover:underline">
-              <a href="#">Contact us</a>
-            </li>
+            <NavLink to="/about">
+              <li className="cursor-pointer hover:underline">About</li>
+              <hr className="border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden" />
+            </NavLink>
+            <NavLink to="/features">
+              <li className="cursor-pointer hover:underline">Features</li>
+              <hr className="border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden" />
+            </NavLink>
+
+            <NavLink to="/pricing">
+              <li className="cursor-pointer hover:underline">Pricing</li>
+              <hr className="border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden" />
+            </NavLink>
+            <NavLink to="/resources">
+              <li className="cursor-pointer hover:underline">Resources</li>
+              <hr className="border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden" />
+            </NavLink>
+            <NavLink to="/contact-us">
+              <li className="cursor-pointer hover:underline">Contact us</li>
+              <hr className="border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden" />
+            </NavLink>
           </ul>
         </div>
         <div className="bg-primary text-white px-2 py-6 mb-2 hidden md:block cursor-pointer">
