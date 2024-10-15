@@ -2,11 +2,10 @@ import { useRef, useState } from "react";
 import logo from "/Users/kwadwo/Development/React js/adaptive_hris_home/src/assets/Adaptive HRIS Web 2024 Artboard 2.png";
 import { RiMenu3Fill } from "react-icons/ri";
 import gsap from "gsap";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const menuRef = useRef(null);
-  const navigate = useNavigate();
   const [showMenu, setShowMenu] = useState<boolean>(false);
 
   const setMenu = (): void => {
